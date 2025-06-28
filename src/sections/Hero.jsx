@@ -12,11 +12,11 @@ import { Suspense } from "react";
 const Hero = () => {
   const isMobile = useMediaQuery({ maxWidth: 828 });
   return (
-    <section className="flex items-start justify-center md:items-start md:justify-start min-h-screen overflow-hidden c-space">
+    <section className="flex items-start justify-center overflow-hidden md:items-start md:justify-start min-h-screen c-space">
       <HeroText />
       <ParallelxBackground />
       <figure
-        className="absolute inset-0"
+        className="absolute inset-0 overflow-y-hidden"
         style={{
           width: "100vw",
           height: "100vh",
