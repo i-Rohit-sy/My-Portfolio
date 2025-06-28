@@ -1,30 +1,60 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import Hero from "./Hero";
+import About from "./About";
 
 const Navbar = () => {
   function Navigation() {
     return (
       <ul className="nav-ul">
-        <li className="nv-li">
-          <a href="" nav-link>
+        <motion.li
+          className="nv-li transition-colors text-neutral-400 hover:text-white"
+          whileHover={{ scale: 1.2 }}
+        >
+          <a href="#home" nav-link>
             Home
           </a>
-        </li>
-        <li className="nv-li">
-          <a href="" nav-link>
+        </motion.li>
+        <motion.li
+          className="nv-li transition-colors text-neutral-400 hover:text-white"
+          whileHover={{ scale: 1.2 }}
+        >
+          <a href="#about" nav-link>
             About
           </a>
-        </li>
-        <li className="nv-li">
-          <a href="" nav-link>
+        </motion.li>
+        <motion.li
+          className="nv-li transition-colors text-neutral-400 hover:text-white"
+          whileHover={{ scale: 1.2 }}
+        >
+          <a href="#projects" nav-link>
             Projects
           </a>
-        </li>
-        <li className="nv-li">
-          <a href="" nav-link>
+        </motion.li>
+        <motion.li
+          className="nv-li transition-colors text-neutral-400 hover:text-white"
+          whileHover={{ scale: 1.2 }}
+        >
+          <a href="#contact" nav-link>
             Contact
           </a>
-        </li>
+        </motion.li>
+        <motion.li
+          className="nv-li transition-colors text-neutral-400 hover:text-white"
+          whileHover={{ scale: 1.2 }}
+        >
+          <a href="/assets/Rohit-Resume.pdf" download nav-link>
+            Resume
+          </a>
+        </motion.li>
+        <motion.li
+          className="nv-li transition-colors text-neutral-400 hover:text-white"
+          whileHover={{ scale: 1.2 }}
+        >
+          <a href="#footer" nav-link>
+            Connect
+          </a>
+        </motion.li>
       </ul>
     );
   }
@@ -35,7 +65,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between py-2 sm:py-0">
           <a
             href="/"
-            className="text-xl font-bold transition-colors text-neutral-400 hover:text-white"
+            className="text-3xl font-bold transition-colors text-neutral-400 hover:text-white"
           >
             Rohit
           </a>

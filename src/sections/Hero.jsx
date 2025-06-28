@@ -12,7 +12,10 @@ import { Suspense } from "react";
 const Hero = () => {
   const isMobile = useMediaQuery({ maxWidth: 828 });
   return (
-    <section className="flex items-start justify-center overflow-hidden md:items-start md:justify-start min-h-screen c-space">
+    <section
+      id="home"
+      className="flex items-start justify-center overflow-hidden md:items-start md:justify-start min-h-screen c-space"
+    >
       <HeroText />
       <ParallelxBackground />
       <figure
