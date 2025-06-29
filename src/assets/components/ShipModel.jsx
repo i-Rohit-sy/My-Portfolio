@@ -35,7 +35,7 @@ export function ShipModel(props) {
       {...props}
       dispose={null}
       scale={props.scale || 0.009}
-      position={props.position || [4, -0.9, -1]}
+      position={props.position || [4, -1, -1]}
       rotation={[-Math.PI / -4, 1, -0.6]}
     >
       <primitive object={nodes._rootJoint} />

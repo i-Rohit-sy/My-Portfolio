@@ -103,12 +103,12 @@ const About = () => {
         </div>
         {/* grid 5 */}
         <div className="grid-default-color grid-5">
-          <div className="z-10 w-[50%]">
+          <div className="z-10 w-[60%]">
             <p className="headtext">Tech Stack</p>
             <p className="subtext">
-              With expertise across diverse programming languages, cutting-edge
-              frameworks, and modern developer tools, I architect and engineer
-              robust, scalable solutions that blend performance with precision.
+              With expertise in multiple programming languages and modern
+              frameworks, I build robust, scalable solutions that seamlessly
+              combine performance and precision.
             </p>
           </div>
           <div className="absolute inset-0 md:inset-y-9 w-full h-full start-[50%] md:scle-125">

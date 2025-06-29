@@ -11,7 +11,7 @@ const Navbar = () => {
           className="nv-li transition-colors text-neutral-400 hover:text-white"
           whileHover={{ scale: 1.2 }}
         >
-          <a href="#home" nav-link>
+          <a href="#home" nav-link={"true"}>
             Home
           </a>
         </motion.li>
@@ -19,7 +19,7 @@ const Navbar = () => {
           className="nv-li transition-colors text-neutral-400 hover:text-white"
           whileHover={{ scale: 1.2 }}
         >
-          <a href="#about" nav-link>
+          <a href="#about" nav-link={"true"}>
             About
           </a>
         </motion.li>
@@ -27,7 +27,7 @@ const Navbar = () => {
           className="nv-li transition-colors text-neutral-400 hover:text-white"
           whileHover={{ scale: 1.2 }}
         >
-          <a href="#projects" nav-link>
+          <a href="#projects" nav-link={"true"}>
             Projects
           </a>
         </motion.li>
@@ -35,7 +35,7 @@ const Navbar = () => {
           className="nv-li transition-colors text-neutral-400 hover:text-white"
           whileHover={{ scale: 1.2 }}
         >
-          <a href="#contact" nav-link>
+          <a href="#contact" nav-link={"true"}>
             Contact
           </a>
         </motion.li>
@@ -43,7 +43,7 @@ const Navbar = () => {
           className="nv-li transition-colors text-neutral-400 hover:text-white"
           whileHover={{ scale: 1.2 }}
         >
-          <a href="/assets/Rohit-Resume.pdf" download nav-link>
+          <a href="/assets/Rohit-Resume.pdf" download nav-link={"true"}>
             Resume
           </a>
         </motion.li>
@@ -51,7 +51,7 @@ const Navbar = () => {
           className="nv-li transition-colors text-neutral-400 hover:text-white"
           whileHover={{ scale: 1.2 }}
         >
-          <a href="#footer" nav-link>
+          <a href="#footer" nav-link={"true"}>
             Connect
           </a>
         </motion.li>
