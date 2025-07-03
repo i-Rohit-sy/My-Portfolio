@@ -47,14 +47,6 @@ const Navbar = () => {
             Resume
           </a>
         </motion.li>
-        <motion.li
-          className="nv-li transition-colors text-neutral-400 hover:text-white"
-          whileHover={{ scale: 1.2 }}
-        >
-          <a href="#footer" nav-link={"true"}>
-            Connect
-          </a>
-        </motion.li>
       </ul>
     );
   }

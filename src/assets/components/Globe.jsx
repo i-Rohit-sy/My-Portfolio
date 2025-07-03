@@ -66,18 +66,30 @@ export default function Globe({ className, config = GLOBE_CONFIG }) {
   };
 
   useEffect(() => {
-    if (!canvasRef.current) return; // <-- Prevent null access
+    if (!canvasRef.current) return;
+
+    const canvas = canvasRef.current;
 
     const onResize = () => {
-      if (canvasRef.current) {
-        width = canvasRef.current.offsetWidth;
-      }
+      width = canvas.offsetWidth;
     };
 
+    const onContextLost = (e) => {
+      e.preventDefault();
+      console.warn("⚠️ WebGL context lost");
+    };
+
+    const onContextRestored = () => {
+      console.info("✅ WebGL context restored");
+      // Optionally re-create the globe here
+    };
+
+    canvas.addEventListener("webglcontextlost", onContextLost, false);
+    canvas.addEventListener("webglcontextrestored", onContextRestored, false);
     window.addEventListener("resize", onResize);
     onResize();
 
-    const globe = createGlobe(canvasRef.current, {
+    const globe = createGlobe(canvas, {
       ...config,
       width: width * 2,
       height: width * 2,
@@ -89,10 +101,13 @@ export default function Globe({ className, config = GLOBE_CONFIG }) {
       },
     });
 
-    setTimeout(() => (canvasRef.current.style.opacity = "1"), 0);
+    setTimeout(() => (canvas.style.opacity = "1"), 0);
+
     return () => {
       globe.destroy();
       window.removeEventListener("resize", onResize);
+      canvas.removeEventListener("webglcontextlost", onContextLost);
+      canvas.removeEventListener("webglcontextrestored", onContextRestored);
     };
   }, [rs, config]);
 
